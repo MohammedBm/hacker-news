@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, WebView } from 'react-native';
 import api from "../../API/api"
 import Comment from './CommentScreen'
+import RefreshableListView from '../../Components/RefreshableListView'
 
 export default class Web extends React.Component {
   render(){
