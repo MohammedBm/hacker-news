@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, WebView } from 'react-native';
 import api from "../../API/api"
-
+import Comment from './CommentScreen'
 
 export default class Web extends React.Component {
   render(){
