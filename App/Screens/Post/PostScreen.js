@@ -16,13 +16,11 @@ export default class Web extends React.Component {
 module.exports = React.createClass({
   render: function () {
     return (
-      <RefreshableListView  
-        renderRow={(row) => this.renderListViewRow(Row)}
+      <RefreshableListView renderRow={(row) => this.renderListViewRow(row)}
         renderHeader={this.renderListViewHeader}
         onRefresh={(page, callback) => this.listViewOnRefresh(page, callback)}
-        backgroundColor={'#F6F6EF'}}
-        loadMoreText={'Load More ....'}
-      />
+        backgroundColor={'#F6F6EF'}
+        loadMoreText={'Load More...'} />
     )
   },
   renderListViewHeader: function(row){
