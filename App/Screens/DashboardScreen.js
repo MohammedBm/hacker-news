@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import api from '../API/api'
-import Post from '../Screens/Post/PostScreen'
+import * as post from '../Screens/Post/PostScreen'
 import TabBar from '../Components/TabBar'
 import RefreshableListView from '../Components/RefreshableListView'
 

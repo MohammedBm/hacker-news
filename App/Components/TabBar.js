@@ -1,11 +1,8 @@
-import React from 'react';
-import { View, TabBarIOS, StyleSheet, Platform } from 'react-native';
+import React, { Component } from 'react';
+import { View, TabBarIOS, StyleSheet, TabBarItem } from 'react-native';
 import { ScrollableTabView } from "react-native-scrollable-tab-view"
-import Icon from 'react-native-vector-icons/FontAwesome'
 
-
-export default class TabBar extends React.Component {
-
+class TabBar extends Component {
     state = {
       structure: this.props.structure,
       selectedTab: this.props.selectedTab,
@@ -13,24 +10,14 @@ export default class TabBar extends React.Component {
       activeTintColor: this.props.activeTintColor ? this.props.activeTintColor : null
     }
 
-  render(){
-    return (      
+  render() {
+    return(      
       <TabBarIOS 
-        tintColor={this.state.activeTintColor}
+        tintColor={'#fff'}
         translucent={true}>
-        {this.state.structure.map((tabProps, tabIndex) => 
-          <Icon.TabBarItem
-            title = {tabProps.iconName}
-            iconSize = {this.state.iconSize}
-            selected = {tabIndex == this.state.selectedTab}
-            onPress={() => { this.setState({ selectedTab: tabIndex }); }}
-            >
-              {tabProps.renderContent()}
-            </Icon.TabBarItem>
-        )}
       </TabBarIOS>
     );
   }
-
-
 }
+
+export default TabBar;
